@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "env": {
+    "VUE_APP_API_URL": "你的后端API地址"
+  }
+} 

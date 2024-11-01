@@ -41,6 +41,7 @@ import { ref, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import axios from 'axios'
+import { API_URL } from '@/config/api'
 
 const router = useRouter()
 const loading = ref(false)
@@ -68,7 +69,7 @@ const handleLogin = async () => {
     
     loading.value = true
     try {
-      const response = await axios.post('http://localhost:5000/api/users/login', {
+      const response = await axios.post(`${API_URL}/api/users/login`, {
         username: loginForm.username,
         password: loginForm.password
       }, {
