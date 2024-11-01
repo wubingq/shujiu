@@ -7,17 +7,27 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// 添加内存缓存服务
+builder.Services.AddDistributedMemoryCache();
+
+// 添加 Session 服务
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 // 添加 CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowVueApp",
-        builder =>
-        {
-            builder.SetIsOriginAllowed(origin => true) // 允许任何来源
-                   .AllowAnyHeader()
-                   .AllowAnyMethod()
-                   .AllowCredentials();
-        });
+    options.AddPolicy("VueApp", builder =>
+    {
+        builder.WithOrigins("http://localhost:8080")
+               .AllowCredentials()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
 });
 
 // 注册服务
@@ -32,11 +42,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// 删除 HTTPS 重定向
-// app.UseHttpsRedirection();  // 注释掉这行
+app.UseCors("VueApp");  // 确保这行在其他中间件之前
 
-app.UseCors("AllowVueApp");  // 确保这行在其他中间件之前
+app.UseSession();  // Session 中间件
+
 app.UseAuthorization();
+
 app.MapControllers();
 
 // 只监听 HTTP
