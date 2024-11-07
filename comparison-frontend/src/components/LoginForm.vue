@@ -32,6 +32,13 @@
           </el-button>
         </el-form-item>
       </el-form>
+<<<<<<< HEAD
+=======
+      <div class="login-tip">
+        默认用户名：admin<br>
+        默认密码：admin
+      </div>
+>>>>>>> 01_branch
     </el-card>
   </div>
 </template>
@@ -40,13 +47,23 @@
 import { ref, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
+<<<<<<< HEAD
 import axios from 'axios'
 import { API_URL } from '@/config/api'
+=======
+>>>>>>> 01_branch
 
 const router = useRouter()
 const loading = ref(false)
 const loginFormRef = ref(null)
 
+<<<<<<< HEAD
+=======
+// 设置固定的用户名和密码
+const VALID_USERNAME = 'admin'
+const VALID_PASSWORD = 'admin'
+
+>>>>>>> 01_branch
 const loginForm = reactive({
   username: '',
   password: ''
@@ -64,6 +81,7 @@ const rules = {
 const handleLogin = async () => {
   if (!loginFormRef.value) return
   
+<<<<<<< HEAD
   await loginFormRef.value.validate(async (valid) => {
     if (!valid) return
     
@@ -87,6 +105,22 @@ const handleLogin = async () => {
     } finally {
       loading.value = false
     }
+=======
+  await loginFormRef.value.validate((valid) => {
+    if (!valid) return
+    
+    loading.value = true
+    
+    // 验证用户名和密码
+    if (loginForm.username === VALID_USERNAME && loginForm.password === VALID_PASSWORD) {
+      ElMessage.success('登录成功')
+      router.push('/comparison')
+    } else {
+      ElMessage.error('用户名或密码错误')
+    }
+    
+    loading.value = false
+>>>>>>> 01_branch
   })
 }
 </script>
@@ -111,4 +145,14 @@ const handleLogin = async () => {
   margin: 0;
   color: #2c3e50;
 }
+<<<<<<< HEAD
+=======
+
+.login-tip {
+  text-align: center;
+  color: #909399;
+  font-size: 14px;
+  margin-top: 10px;
+}
+>>>>>>> 01_branch
 </style> 

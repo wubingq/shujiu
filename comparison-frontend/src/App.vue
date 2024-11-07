@@ -1,5 +1,11 @@
 <template>
+<<<<<<< HEAD
   <router-view></router-view>
+=======
+  <div id="app">
+    <router-view></router-view>
+  </div>
+>>>>>>> 01_branch
 </template>
 
 <script>

@@ -1,8 +1,12 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ZGT/GxzXkJU=",
+=======
+  "dgSpecHash": "b8seRn341R8=",
+>>>>>>> 01_branch
   "success": true,
-  "projectFilePath": "D:\\测试文件\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj",
+  "projectFilePath": "D:\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\27977\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\27977\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

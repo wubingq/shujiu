@@ -1,8 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginForm from '../components/LoginForm.vue'
 import ComparisonForm from '../components/ComparisonForm.vue'
+<<<<<<< HEAD
 import axios from 'axios'
 import { API_URL } from '@/config/api'
+=======
+>>>>>>> 01_branch
 
 const routes = [
   {
@@ -11,10 +14,18 @@ const routes = [
   },
   {
     path: '/login',
+<<<<<<< HEAD
+=======
+    name: 'Login',
+>>>>>>> 01_branch
     component: LoginForm
   },
   {
     path: '/comparison',
+<<<<<<< HEAD
+=======
+    name: 'Comparison',
+>>>>>>> 01_branch
     component: ComparisonForm,
     meta: { requiresAuth: true }
   }
@@ -26,6 +37,7 @@ const router = createRouter({
 })
 
 // 路由守卫
+<<<<<<< HEAD
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     try {
@@ -44,6 +56,12 @@ router.beforeEach(async (to, from, next) => {
   } else {
     next()
   }
+=======
+router.beforeEach((to, from, next) => {
+  // 这里可以添加登录验证逻辑
+  // 暂时简单处理，后续可以根据实际需求完善
+  next()
+>>>>>>> 01_branch
 })
 
 export default router 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\测试文件\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj": {}
+    "D:\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj": {}
   },
   "projects": {
-    "D:\\测试文件\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj": {
+    "D:\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\测试文件\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj",
+        "projectUniqueName": "D:\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj",
         "projectName": "ComparisonAPI",
-        "projectPath": "D:\\测试文件\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj",
+        "projectPath": "D:\\数据比较\\ComparisonAPI\\ComparisonAPI.csproj",
         "packagesPath": "C:\\Users\\27977\\.nuget\\packages\\",
-        "outputPath": "D:\\测试文件\\数据比较\\ComparisonAPI\\obj\\",
+        "outputPath": "D:\\数据比较\\ComparisonAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\27977\\AppData\\Roaming\\NuGet\\NuGet.Config",
