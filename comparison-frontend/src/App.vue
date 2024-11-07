@@ -1,17 +1,12 @@
 <template>
   <div id="app">
-    <ComparisonForm />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ComparisonForm from './components/ComparisonForm.vue'
-
 export default {
-  name: 'App',
-  components: {
-    ComparisonForm
-  }
+  name: 'App'
 }
 </script>
 
